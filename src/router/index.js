@@ -10,20 +10,24 @@ import Sounds from '../views/admin/Sounds';
 Vue.use(VueRouter)
 
 const routes = [
-
-  {
-    // Landing Page
-    path: '/',
-    component: () => import('../views/Home'), 
-  },
+  // {
+  //   // Landing Page
+  //   path: '/',
+  //   component: () => import('../views/Home'), 
+  // },
+  // {
+  //   // Login Page
+  //   path: '/Login',
+  //   component: Login
+  // },
   {
     // Login Page
-    path: '/Login',
+    path: '/',
     component: Login
   },
   {
     path: '/admin',
-    component: () => import('../views/admin/AdminHome'),
+    component: () => import('../views/admin/AdminHome.vue'),
     children: [
       { path: '', component: Dashboard },
       { path: 'sounds', component: Sounds },
@@ -36,7 +40,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes
 });
 
