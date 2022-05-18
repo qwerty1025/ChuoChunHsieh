@@ -14,7 +14,7 @@ const routes = [
   {
     // Landing Page
     path: '/',
-    component: () => import('../views/Home.vue'), 
+    component: () => import('../views/Home'), 
   },
   {
     // Login Page
@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: '/admin',
-    component: () => import('../views/admin/AdminHome.vue'),
+    component: () => import('../views/admin/AdminHome'),
     children: [
       { path: '', component: Dashboard },
       { path: 'sounds', component: Sounds },
